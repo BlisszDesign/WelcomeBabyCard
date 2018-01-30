@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#1466A3"
+	tools:context=".MainActivity">
+
+     <ImageView
+	     android:id="@+id/baby"
+	     android:layout_width="wrap_content"
+	     android:layout_height="wrap_content"
+	     android:src="@drawable/sleepingbaby"
+	     android:scaleType="center"
+	     android:padding="30dp"
+	     />
+
+	<ImageView
+		android:id="@+id/pen"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_above="@id/calendar"
+		android:layout_alignEnd="@id/date"
+		android:layout_alignRight="@id/date"
+		android:scaleType="centerCrop"
+		android:src="@drawable/pen" />
+
+	<ImageView
+		android:id="@+id/calendar"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_above="@id/pointer"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentStart="true"
+		android:paddingBottom="20dp"
+		android:scaleType="centerCrop"
+		android:src="@drawable/calendar" />
+
+	<ImageView
+		android:id="@+id/pointer"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignEnd="@id/calendar"
+		android:layout_alignRight="@id/calendar"
+		android:layout_below="@id/ruler"
+		android:paddingBottom="20dp"
+		android:scaleType="centerCrop"
+		android:src="@drawable/pointer" />
+
+	<ImageView
+		android:id="@+id/ruler"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_above="@id/weight"
+		android:layout_marginLeft="20dp"
+		android:layout_marginStart="20dp"
+		android:layout_toEndOf="@id/date"
+		android:layout_toRightOf="@id/date"
+		android:paddingBottom="20dp"
+		android:scaleType="centerCrop"
+		android:src="@drawable/ruler" />
+
+	<ImageView
+		android:id="@+id/weight"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignLeft="@id/ruler"
+		android:layout_alignParentBottom="true"
+		android:layout_alignStart="@id/ruler"
+		android:paddingBottom="5dp"
+		android:scaleType="centerCrop"
+		android:src="@drawable/weight" />
+
+	<TextView
+		android:id="@+id/boy"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:fontFamily="@font/dancingscript"
+		android:text="It´s a boy!"
+		android:textColor="@android:color/white"
+		android:textSize="36sp" />
+     	
+	<TextView
+		android:id="@+id/name"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignBottom="@+id/pen"
+		android:layout_toEndOf="@id/pen"
+		android:layout_toRightOf="@id/pen"
+		android:fontFamily="@font/dancingscript"
+		android:padding="10dp"
+		android:text="Milán"
+		android:textColor="@android:color/white"
+		android:textSize="36sp" />
+
+	<TextView
+		android:id="@+id/date"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_above="@id/time"
+		android:layout_toEndOf="@id/calendar"
+		android:layout_toRightOf="@id/calendar"
+		android:fontFamily="@font/dancingscript"
+		android:paddingBottom="5dp"
+		android:paddingLeft="20dp"
+		android:text="2017.02.04."
+		android:textColor="@android:color/white"
+		android:textSize="20sp" />
+
+	<TextView
+		android:id="@+id/time"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_above="@id/pointer"
+		android:layout_toEndOf="@id/calendar"
+		android:layout_toRightOf="@id/calendar"
+		android:fontFamily="@font/dancingscript"
+		android:paddingBottom="10dp"
+		android:paddingLeft="20dp"
+		android:text="19:35"
+		android:textColor="@android:color/white"
+		android:textSize="20sp" />
+
+	<TextView
+		android:id="@+id/city"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignBottom="@id/pointer"
+		android:layout_marginBottom="13dp"
+		android:layout_toEndOf="@id/pointer"
+		android:layout_toRightOf="@id/pointer"
+		android:fontFamily="@font/dancingscript"
+		android:paddingBottom="10dp"
+		android:paddingLeft="20dp"
+		android:text="Esztergom"
+		android:textColor="@android:color/white"
+		android:textSize="25sp" />
+
+	<TextView
+		android:id="@+id/cm"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignBottom="@+id/date"
+		android:layout_toEndOf="@id/name"
+		android:layout_toRightOf="@id/name"
+		android:fontFamily="@font/dancingscript"
+		android:paddingRight="10dp"
+		android:text="50 cm"
+		android:textColor="@android:color/white"
+		android:textSize="25sp" />
+
+    <TextView
+	    android:id="@+id/kg"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBottom="@+id/city"
+	    android:layout_toEndOf="@id/weight"
+	    android:layout_toRightOf="@id/weight"
+	    android:fontFamily="@font/dancingscript"
+	    android:paddingBottom="10dp"
+	    android:paddingLeft="10dp"
+	    android:paddingRight="10dp"
+	    android:text="3100 g"
+	    android:textColor="@android:color/white"
+	    android:textSize="25sp" />
+
+</RelativeLayout>
